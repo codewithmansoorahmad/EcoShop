@@ -1,10 +1,12 @@
 import HeaderHead from "../components/headerPage/HeaderHead";
 import HeaderNav from "../components/headerPage/HeaderNav";
+import HeaderSearch from "../components/headerPage/HeaderSearch";
 
 export default function HeaderPage(){
     return <div>
 
         <HeaderHead/>
         <HeaderNav/>
+        <HeaderSearch/>
     </div>
 }
