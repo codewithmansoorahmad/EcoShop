@@ -1,9 +1,9 @@
-
+import HeaderPage from "./pages/Header"
 
 function App() {
   return (
     <>
-    <h1>EcoShop</h1>
+    <HeaderPage/>
       </>
   )
 }
