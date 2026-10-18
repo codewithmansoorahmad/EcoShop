@@ -23,12 +23,12 @@ export default function HeaderLinks() {
                     <NavLink to="/" onClick={() => setIsIcon(false)}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" onClick={() => setIsIcon(false)}>Shop All</NavLink>
+                    <NavLink to="/ShopAll" onClick={() => setIsIcon(false)}
+                    >Shop All</NavLink>
                 </li>
                 <li>
                     <select
-                        className=" -ml-1.25 cursor-pointer bg-transparent  outline-none"
-                        defaultValue="categories"
+   className="cursor-pointer border-none outline-none -ml-1.25 "
                         onChange={() => setIsIcon(false)}
                     >
                         <option value="categories" >Categories</option>
@@ -43,10 +43,10 @@ export default function HeaderLinks() {
                     </select>
                 </li>
                 <li>
-                    <NavLink to="/" onClick={() => setIsIcon(false)}>New Arrivals</NavLink>
+                    <NavLink to="/NewArrivals" onClick={() => setIsIcon(false)}>New Arrivals</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" onClick={() => setIsIcon(false)}>New Deals</NavLink>
+                    <NavLink to="Deals/" onClick={() => setIsIcon(false)}>New Deals</NavLink>
                 </li>
             </ul>
         </div>

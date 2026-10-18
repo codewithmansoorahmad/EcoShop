@@ -2,3 +2,6 @@
 select, option{
   cursor:pointer
 }
+li a.active {
+  @apply text-green-600 font-semibold;
+}
