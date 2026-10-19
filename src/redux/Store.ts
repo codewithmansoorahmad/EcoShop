@@ -1,3 +1,9 @@
 
-// import headerReducer from "./HeaderSlice"
-// const store =con
+import { configureStore } from "@reduxjs/toolkit"
+import headerReducer from "./HeaderSlice"
+const store =configureStore({
+    reducer:{
+    header:headerReducer
+    }  
+})
+export default store
