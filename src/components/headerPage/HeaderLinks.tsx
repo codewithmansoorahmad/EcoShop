@@ -7,7 +7,7 @@ export default function HeaderLinks() {
     const [isIcon, setIsIcon] = useState(false)
 
     return (
-        <div className="relative px-5 py-3">
+        <div className="relative mx-5 my-3 rounded-md py-2 px-2 bg-green-800 text-white">
             <button
                 className="sm:hidden cursor-pointer"
                 onClick={() => setIsIcon(!isIcon)}
