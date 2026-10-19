@@ -1,4 +1,4 @@
-import { Heart, Leaf, ShoppingBag,  User } from "lucide-react";
+import { Heart, Leaf,  ShoppingBag,  User } from "lucide-react";
 
 export default function HeaderNav(){
     return <div className="flex justify-between items-center px-5 py-4">

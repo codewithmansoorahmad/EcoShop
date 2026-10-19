@@ -4,7 +4,7 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
 export default function HeaderLinks() {
-    const [isIcon, setIsIcon] = useState(false)
+    const [isIcon, setIsIcon] = useState<boolean>(false)
 
     return (
         <div className="relative mx-5 my-3 rounded-md py-2 px-2 bg-green-800 text-white">
