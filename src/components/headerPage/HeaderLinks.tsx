@@ -17,7 +17,7 @@ export default function HeaderLinks() {
             </button>
 
             <ul
-                className={`${isIcon ? "absolute left-5 top-full z-50 flex w-52 flex-col items-start gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-lg" : "hidden"} sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:justify-center sm:gap-6 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
+                className={`${isIcon ? "absolute left-5 top-full z-50 text-gray-800 sm:text-white flex w-52 flex-col items-start gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-lg" : "hidden"} sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:justify-center sm:gap-6 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
             >
                 <li>
                     <NavLink to="/" onClick={() => setIsIcon(false)}>Home</NavLink>

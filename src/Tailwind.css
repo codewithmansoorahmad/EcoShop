@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 li a.active {
-  @apply text-green-600 font-semibold;
+  @apply   font-semibold;
 }
