@@ -6,4 +6,5 @@ const store =configureStore({
     header:headerReducer
     }  
 })
+export type RootState=ReturnType<typeof store.getState>;
 export default store
