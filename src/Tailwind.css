@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body{
+  background-color: #F7F8F2;
+}
 li a.active {
   @apply   font-semibold;
 }

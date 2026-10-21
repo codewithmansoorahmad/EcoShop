@@ -8,7 +8,7 @@ function App() {
     <HeaderPage />
     </header>
 
-    <main className="px-5 py-3 bg-[#F7F8F2]">
+    <main >
     <HomePage/>
     </main>
       </>
