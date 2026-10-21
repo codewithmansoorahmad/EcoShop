@@ -6,7 +6,7 @@ import HeaderSearch from "../components/headerPage/HeaderSearch";
 export default function HeaderPage(){
     return <div>
 
-        <HeaderHead/>
+        {/* <HeaderHead/> */}
         <HeaderNav/>
         <HeaderSearch/>
         <HeaderLinks/>
