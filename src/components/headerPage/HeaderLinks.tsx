@@ -31,15 +31,15 @@ export default function HeaderLinks() {
    className="cursor-pointer border-none outline-none -ml-1.25 "
                         onChange={() => setIsIcon(false)}
                     >
-                        <option value="categories" >Categories</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="clothing">Clothing</option>
-                        <option value="beauty">Beauty</option>
-                        <option value="accessories">Accessories</option>
-                        <option value="home">Home</option>
-                        <option value="sports">Sports</option>
-                        <option value="fitness">Fitness</option>
-                        <option value="stationery">Stationery</option>
+                        <option className="text-gray-900"  value="categories" >Categories</option>
+                        <option className="text-gray-900" value="electronics">Electronics</option>
+                        <option className="text-gray-900" value="clothing">Clothing</option>
+                        <option className="text-gray-900" value="beauty">Beauty</option>
+                        <option className="text-gray-900" value="accessories">Accessories</option>
+                        <option className="text-gray-900" value="home">Home</option>
+                        <option className="text-gray-900" value="sports">Sports</option>
+                        <option className="text-gray-900" value="fitness">Fitness</option>
+                        <option className="text-gray-900" value="stationery">Stationery</option>
                     </select>
                 </li>
                 <li>
