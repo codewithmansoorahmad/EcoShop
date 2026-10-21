@@ -1,0 +1,5 @@
+Main website background: bg-[#F7F8F2]
+Light green sections: bg-[#F0F5EC]
+Product cards: bg-white
+Buttons: bg-[#245C3A]
+Hover buttons: hover:bg-[#1B472C]

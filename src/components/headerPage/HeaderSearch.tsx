@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, } from "react-redux";
 import { getInput } from "../../redux/HeaderSlice";
 import { useAppSelector } from "../../redux/Hook";
 
