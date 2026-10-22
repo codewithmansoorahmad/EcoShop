@@ -9,7 +9,7 @@ export default function HomeHero(){
             <button className="bg-[#245C3A] hover:bg-[#1B472C] cursor-pointer py-2 flex items-center justify-center text-white rounded-sm ">Explore Products <span><ArrowRight size={18}/></span></button>
         </div>
         <div>
-            <img src="/Hero.avif" alt="" className="rounded-sm md:h-92"/>
+            <img src="/Hero.avif" alt="" className="rounded-sm md:h-98"/>
         </div>
     </div>
 }
