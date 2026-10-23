@@ -10,6 +10,10 @@ export default function HomeCategory() {
         { id: 2, name: "Sports", img: "/sports.avif" },
         { id: 3, name: "Cloths", img: "/Cloth.avif" },
         { id: 4, name: "Beauty", img: "/beauty.avif" },
+        { id: 5, name: "Accessories", img: "/Accessories.avif" },
+        { id: 6, name: "Stationary", img: "/Stationary.avif" },
+        { id: 7, name: "Electronics", img: "/Electronics.avif" },
+        { id: 7, name: "Fitness", img: "/Fitness.avif" },
     ]
 
     return (
