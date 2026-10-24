@@ -15,7 +15,6 @@ export default function HomeCategory() {
         { id: 7, name: "Electronics", img: "/Electronics.avif" },
         { id: 7, name: "Fitness", img: "/Fitness.avif" },
     ]
-
     return (
         <div className="px-4 py-8">
             <h1 className="text-sm text-green-700 font-medium">
