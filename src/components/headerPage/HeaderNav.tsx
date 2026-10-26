@@ -10,7 +10,7 @@ export default function HeaderNav(){
 <div className=" flex gap-3 ">
     <span onClick={()=>{navigate("/Login")}} className=" p-2   rounded-md cursor-pointer bg-gray-100">< User strokeWidth={1.5} className="size-5  sm:size-6"/></span>
     <span onClick={()=>{navigate("/Favorites")}} className=" p-2  rounded-md cursor-pointer bg-gray-100">< Heart strokeWidth={1.5} className="size-5  sm:size-6"/></span>
-    <span className=" p-2 cursor-pointer rounded-md  bg-gray-100">< ShoppingBag strokeWidth={1.5} className="size-5 sm:size-6"/></span>
+    <span onClick={()=>{navigate("/Cart")}} className=" p-2 cursor-pointer rounded-md  bg-gray-100">< ShoppingBag strokeWidth={1.5} className="size-5 sm:size-6"/></span>
 </div>
     </div>
 }
