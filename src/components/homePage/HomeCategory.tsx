@@ -13,7 +13,7 @@ export default function HomeCategory() {
         { id: 5, name: "Accessories", img: "/Accessories.avif" },
         { id: 6, name: "Stationary", img: "/Stationary.avif" },
         { id: 7, name: "Electronics", img: "/Electronics.avif" },
-        { id: 7, name: "Fitness", img: "/Fitness.avif" },
+        { id: 8, name: "Fitness", img: "/Fitness.avif" },
     ]
     return (
         <div className="px-4 py-8">
