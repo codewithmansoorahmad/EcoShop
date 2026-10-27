@@ -8,26 +8,14 @@ import NewArrivals from "./pages/NewArrivals"
 import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
 import { useEffect } from "react"
+import { getAllProducts } from "./services/API_Call"
 
 function App() {
-async function getData() {
-  try {
-    const res = await fetch("https://dummyjson.com/products");
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch products");
-    }
-
-    const data = await res.json();
-
-    console.log(data.products);
-    return data.products;
-  } catch (error) {
-    console.error("Error fetching products:", error);
-    return [];
+  async function callProducts(){
+    const pro =await getAllProducts()
+    console.log(pro)
   }
-}
-    console.log(getData())
+callProducts()
   return (
     <>
     <HeaderPage />
