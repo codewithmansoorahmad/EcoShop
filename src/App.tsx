@@ -13,7 +13,6 @@ import { getAllProducts } from "./services/API_Call"
 function App() {
   async function callProducts(){
     const pro =await getAllProducts()
-    console.log(pro)
   }
 callProducts()
   return (
