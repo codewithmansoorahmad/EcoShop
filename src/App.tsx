@@ -8,11 +8,12 @@ import NewArrivals from "./pages/NewArrivals"
 import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
 import { useEffect } from "react"
-import { getAllProducts } from "./services/API_Call"
+import { getAllProducts, getProductsByCategory } from "./services/API_Call"
 
 function App() {
   async function callProducts(){
-    const pro =await getAllProducts()
+    const pro =await getProductsByCategory("Beauty")
+    console.log(pro.products)
   }
 callProducts()
   return (

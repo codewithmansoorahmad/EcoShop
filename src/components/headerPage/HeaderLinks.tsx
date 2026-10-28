@@ -27,20 +27,39 @@ export default function HeaderLinks() {
                     >Shop All</NavLink>
                 </li>
                 <li>
-                    <select
-   className="cursor-pointer border-none outline-none -ml-1.25 "
-                        onChange={() => setIsIcon(false)}
-                    >
-                        <option className="text-gray-900"  value="categories" >Categories</option>
-                        <option className="text-gray-900" value="electronics">Electronics</option>
-                        <option className="text-gray-900" value="clothing">Clothing</option>
-                        <option className="text-gray-900" value="beauty">Beauty</option>
-                        <option className="text-gray-900" value="accessories">Accessories</option>
-                        <option className="text-gray-900" value="home">Home</option>
-                        <option className="text-gray-900" value="sports">Sports</option>
-                        <option className="text-gray-900" value="fitness">Fitness</option>
-                        <option className="text-gray-900" value="stationery">Stationery</option>
-                    </select>
+<select
+  className="cursor-pointer border-none outline-none -ml-1.25"
+  onChange={() => setIsIcon(false)}
+>
+  <option className="text-gray-900" value="">
+    Categories
+  </option>
+  <option className="text-gray-900" value="beauty">Beauty</option>
+  <option className="text-gray-900" value="fragrances">Fragrances</option>
+  <option className="text-gray-900" value="furniture">Furniture</option>
+  <option className="text-gray-900" value="groceries">Groceries</option>
+  <option className="text-gray-900" value="home-decoration">Home Decoration</option>
+  <option className="text-gray-900" value="kitchen-accessories">Kitchen Accessories</option>
+  <option className="text-gray-900" value="laptops">Laptops</option>
+  <option className="text-gray-900" value="mens-shirts">Men's Shirts</option>
+  <option className="text-gray-900" value="mens-shoes">Men's Shoes</option>
+  <option className="text-gray-900" value="mens-watches">Men's Watches</option>
+  <option className="text-gray-900" value="mobile-accessories">Mobile Accessories</option>
+  <option className="text-gray-900" value="motorcycle">Motorcycle</option>
+  <option className="text-gray-900" value="skin-care">Skin Care</option>
+  <option className="text-gray-900" value="smartphones">Smartphones</option>
+  <option className="text-gray-900" value="sports-accessories">Sports Accessories</option>
+  <option className="text-gray-900" value="sunglasses">Sunglasses</option>
+  <option className="text-gray-900" value="tablets">Tablets</option>
+  <option className="text-gray-900" value="tops">Tops</option>
+  <option className="text-gray-900" value="vehicle">Vehicle</option>
+  <option className="text-gray-900" value="womens-bags">Women's Bags</option>
+  <option className="text-gray-900" value="womens-dresses">Women's Dresses</option>
+  <option className="text-gray-900" value="womens-jewellery">Women's Jewellery</option>
+  <option className="text-gray-900" value="womens-shoes">Women's Shoes</option>
+  <option className="text-gray-900" value="womens-watches">Women's Watches</option>
+</select>
+
                 </li>
                 <li>
                     <NavLink to="/NewArrivals" onClick={() => setIsIcon(false)}>New Arrivals</NavLink>
