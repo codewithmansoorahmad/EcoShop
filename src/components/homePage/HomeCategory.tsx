@@ -11,11 +11,12 @@ const dispatch=useDispatch()
    const products: porduct[] = [
     { id: 1, name: "Furniture", img: "/Home.avif" },
     { id: 2, name: "Sports Accessories", img: "/sports.avif" },
-    { id: 3, name: "Men's Shirts", img: "/Cloth.avif" },
+    { id: 3, name: "Men's Shirts", img: "/menshirts.avif" },
     { id: 4, name: "Beauty", img: "/beauty.avif" },
     { id: 5, name: "Mobile Accessories", img: "/Accessories.avif" },
-    { id: 6, name: "Groceries", img: "/Stationary.avif" },
+    { id: 6, name: "Groceries", img: "/grocery.avif" },
     { id: 7, name: "Smartphones", img: "/Electronics.avif" },
+    { id: 8, name: "Women's Dresses", img: "/womendresses.avif" },
 ];
     return (
         <div className="px-4 py-8">
