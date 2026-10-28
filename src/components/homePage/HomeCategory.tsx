@@ -1,20 +1,22 @@
+import { useDispatch } from "react-redux"
+import { getCategory } from "../../redux/HeaderSlice";
+
 export default function HomeCategory() {
     type porduct = {
         id: number,
         name: string,
         img: string
     }
-
-    const products: porduct[] = [
-        { id: 1, name: "Home", img: "/Home.avif" },
-        { id: 2, name: "Sports", img: "/sports.avif" },
-        { id: 3, name: "Cloths", img: "/Cloth.avif" },
-        { id: 4, name: "Beauty", img: "/beauty.avif" },
-        { id: 5, name: "Accessories", img: "/Accessories.avif" },
-        { id: 6, name: "Stationary", img: "/Stationary.avif" },
-        { id: 7, name: "Electronics", img: "/Electronics.avif" },
-        { id: 8, name: "Fitness", img: "/Fitness.avif" },
-    ]
+const dispatch=useDispatch()
+   const products: porduct[] = [
+    { id: 1, name: "Furniture", img: "/Home.avif" },
+    { id: 2, name: "Sports Accessories", img: "/sports.avif" },
+    { id: 3, name: "Men's Shirts", img: "/Cloth.avif" },
+    { id: 4, name: "Beauty", img: "/beauty.avif" },
+    { id: 5, name: "Mobile Accessories", img: "/Accessories.avif" },
+    { id: 6, name: "Groceries", img: "/Stationary.avif" },
+    { id: 7, name: "Smartphones", img: "/Electronics.avif" },
+];
     return (
         <div className="px-4 py-8">
             <h1 className="text-sm text-green-700 font-medium">
@@ -29,6 +31,7 @@ export default function HomeCategory() {
                 {products.map((item) => (
                     <div
                         key={item.id}
+                        onClick={()=>dispatch(getCategory(item.name))}
                         className="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:shadow-md"
                     >
                         <img

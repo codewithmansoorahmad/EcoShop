@@ -7,15 +7,9 @@ import NewDealsPage from "./pages/NewDeals"
 import NewArrivals from "./pages/NewArrivals"
 import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
-import { useEffect } from "react"
-import { getAllProducts, getProductsByCategory } from "./services/API_Call"
 
 function App() {
-  async function callProducts(){
-    const pro =await getProductsByCategory("Beauty")
-    console.log(pro.products)
-  }
-callProducts()
+
   return (
     <>
     <HeaderPage />
