@@ -7,7 +7,7 @@ export async function getAllProducts(){
 }
 
 
-export async function getProductsByCategory(category:string){
+export async function getProductsByCategory(category:string|undefined){
     const response=await fetch(URL+"/category/"+category)
     const data=response.json()
     return data
