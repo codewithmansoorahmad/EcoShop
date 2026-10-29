@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { getCategory } from "../../redux/HeaderSlice";
 import { useAppSelector } from "../../redux/Hook";
 
@@ -9,6 +9,7 @@ export default function HeaderLinks() {
   const [isIcon, setIsIcon] = useState<boolean>(false);
   const dispatch = useDispatch();
   const val = useAppSelector((state) => state.header.category);
+  const navigate=useNavigate()
   console.log(val);
 
   return (
@@ -40,6 +41,7 @@ export default function HeaderLinks() {
             onChange={(e) => {
               dispatch(getCategory(e.target.value));
               setIsIcon(false);
+              navigate("/category/"+e.target.value)
             }}
           >
             <option className="text-gray-900" value="">

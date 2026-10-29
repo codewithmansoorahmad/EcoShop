@@ -7,6 +7,7 @@ import NewDealsPage from "./pages/NewDeals"
 import NewArrivals from "./pages/NewArrivals"
 import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
+import CategoryPage from "./pages/Category"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/Cart" element={<CartItems/>} />
       <Route path="/Deals" element={<NewDealsPage/>} />
       <Route path="/NewArrivals" element={<NewArrivals/>} />
+      <Route path="/category/:category" element={<CategoryPage/>} />
     </Routes>
 
       </>
