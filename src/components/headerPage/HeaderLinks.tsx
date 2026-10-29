@@ -7,10 +7,7 @@ import { useAppSelector } from "../../redux/Hook";
 
 export default function HeaderLinks() {
   const [isIcon, setIsIcon] = useState<boolean>(false);
-  const dispatch = useDispatch();
-  const val = useAppSelector((state) => state.header.category);
   const navigate=useNavigate()
-  console.log(val);
 
   return (
     <div className="relative mx-5 my-3 rounded-md py-2 px-2 bg-green-800 text-white">
@@ -39,7 +36,6 @@ export default function HeaderLinks() {
           <select
             className="cursor-pointer border-none outline-none -ml-1.25"
             onChange={(e) => {
-              dispatch(getCategory(e.target.value));
               setIsIcon(false);
               navigate("/category/"+e.target.value)
             }}
