@@ -8,6 +8,7 @@ import NewArrivals from "./pages/NewArrivals"
 import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
 import CategoryPage from "./pages/Category"
+import PageNotFound from "./pages/404"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/Deals" element={<NewDealsPage/>} />
       <Route path="/NewArrivals" element={<NewArrivals/>} />
       <Route path="/category/:category" element={<CategoryPage/>} />
+      <Route path="/*" element={<PageNotFound/>}/>
     </Routes>
 
       </>
