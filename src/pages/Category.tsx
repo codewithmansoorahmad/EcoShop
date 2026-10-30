@@ -19,11 +19,9 @@ export default function CategoryPage() {
     calledCategoryApi();
   }, [category]);
 
-  console.log(products);
 
   return (
     <div>
-      <h1>{category}</h1>
     </div>
   );
 }
