@@ -12,7 +12,6 @@ const HeaderSlice=createSlice({
        getInput:(state,action:PayloadAction<string>)=>{
         state.inputVal=action.payload
        },
-    //   
     }
 })
 export default HeaderSlice.reducer
