@@ -6,6 +6,7 @@ const CartSlice=createSlice({
         CartItems:[]
     },
     reducers:{
-        
+
     }
 })
+export default CartSlice.reducer

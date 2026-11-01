@@ -15,4 +15,4 @@ const HeaderSlice=createSlice({
     }
 })
 export default HeaderSlice.reducer
-export const {getInput,getCategory}=HeaderSlice.actions
+export const {getInput}=HeaderSlice.actions
