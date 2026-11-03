@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import { getCategory } from "../../redux/HeaderSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function HomeCategory() {

@@ -2,7 +2,6 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import { getCategory } from "../../redux/HeaderSlice";
 import { useAppSelector } from "../../redux/Hook";
 
 export default function HeaderLinks() {
