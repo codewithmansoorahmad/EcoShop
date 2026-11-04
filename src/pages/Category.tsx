@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsByCategory } from "../services/API_Call";
 import type productType from "../typescript/ProductsType";
+import { Heart } from "lucide-react";
+import UsedProducts from "../components/UsedProductsMap";
 
 
 export default function CategoryPage() {
@@ -20,28 +22,9 @@ export default function CategoryPage() {
     calledCategoryApi();
   }, [category]);
 console.log(products)
+return<>
+<UsedProducts products={products}/>
+</>
 
-  return (
-    <div>
-
-   {
-  products.map((item: productType) => {
-    return (
-      <div key={item.id}>
-        <img src={item.thumbnail} alt={item.title} />
-        <h3>{item.title}</h3>
-        <p>{item.brand}</p>
-        <p>{item.category}</p>
-        <p>{item.price}</p>
-        <p>{item.discountPercentage}% OFF</p>
-        <p>{item.rating} ⭐</p>
-        <p>{item.availabilityStatus}</p>
-        <button>Add to Cart</button>
-      </div>
-    );
-  })
-}
-
-    </div>
-  );
+  
 }
