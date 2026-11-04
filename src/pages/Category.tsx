@@ -18,10 +18,40 @@ export default function CategoryPage() {
   useEffect(() => {
     calledCategoryApi();
   }, [category]);
-
+console.log(products)
 
   return (
     <div>
+
+   {
+  products.map((item: {
+    id: number;
+    title: string;
+    thumbnail: string;
+    price: number;
+    discountPercentage: number;
+    rating: number;
+    brand: string;
+    category: string;
+    availabilityStatus: string;
+    stock: number;
+  }) => {
+    return (
+      <div key={item.id}>
+        <img src={item.thumbnail} alt={item.title} />
+        <h3>{item.title}</h3>
+        <p>{item.brand}</p>
+        <p>{item.category}</p>
+        <p>{item.price}</p>
+        <p>{item.discountPercentage}% OFF</p>
+        <p>{item.rating} ⭐</p>
+        <p>{item.availabilityStatus}</p>
+        <button>Add to Cart</button>
+      </div>
+    );
+  })
+}
+
     </div>
   );
 }
