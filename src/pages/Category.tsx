@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsByCategory } from "../services/API_Call";
+import type productType from "../typescript/ProductsType";
 
 
 export default function CategoryPage() {
@@ -24,18 +25,7 @@ console.log(products)
     <div>
 
    {
-  products.map((item: {
-    id: number;
-    title: string;
-    thumbnail: string;
-    price: number;
-    discountPercentage: number;
-    rating: number;
-    brand: string;
-    category: string;
-    availabilityStatus: string;
-    stock: number;
-  }) => {
+  products.map((item: productType) => {
     return (
       <div key={item.id}>
         <img src={item.thumbnail} alt={item.title} />
