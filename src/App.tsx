@@ -7,6 +7,7 @@ import Login from "./pages/Login"
 import CartItems from "./pages/Cart"
 import CategoryPage from "./pages/Category"
 import PageNotFound from "./pages/404"
+import Loading from "./components/Loading"
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
       <Route path="/category/:category" element={<CategoryPage/>} />
       <Route path="/*" element={<PageNotFound/>}/>
     </Routes>
-
+<Loading/>
       </>
   )
 }
