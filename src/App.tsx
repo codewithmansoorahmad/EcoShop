@@ -23,7 +23,6 @@ function App() {
       <Route path="/category/:category" element={<CategoryPage/>} />
       <Route path="/*" element={<PageNotFound/>}/>
     </Routes>
-<Loading/>
       </>
   )
 }
