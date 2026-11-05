@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsByCategory } from "../services/API_Call";
-import type productType from "../typescript/ProductsType";
-import { Heart } from "lucide-react";
 import UsedProducts from "../components/UsedProductsMap";
 
 
@@ -25,6 +23,4 @@ console.log(products)
 return<>
 <UsedProducts products={products}/>
 </>
-
-  
 }

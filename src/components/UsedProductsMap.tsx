@@ -4,7 +4,6 @@ interface typeProducts{
     products:productType[]
 }
 export default function UsedProducts({products}:typeProducts){
-    return <>
     return (
     <div className="grid ">
 
@@ -38,5 +37,4 @@ export default function UsedProducts({products}:typeProducts){
 
     </div>
   );
-    </>
 }
