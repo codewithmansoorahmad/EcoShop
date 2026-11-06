@@ -31,7 +31,7 @@ const [error,setError]=useState()
   }, [category]);
 console.log(products)
 return<>
-{isLoading ?<Loading/>:
+{!isLoading ?<Loading/>:
 <UsedProducts products={products}/>
 
 }
