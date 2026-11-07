@@ -11,7 +11,7 @@ export default function UsedProducts({products}:typeProducts){
   products.map((item: productType) => {
     return (
       <div key={item.id} 
-      className="flex flex-col w-70 bg-gray-200 relative px-3 mx-20 "
+      className="flex flex-col w-70  relative px-3 mx-20 "
        >
         <button><Heart/></button>
         <div className="bg-white ">
