@@ -6,3 +6,6 @@ body{
 li a.active {
   @apply   font-semibold;
 }
+@theme{
+  --breakpoint-500:500px;
+}
