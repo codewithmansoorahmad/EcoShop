@@ -6,6 +6,9 @@ export default function ShopAllHead(){
         <h2 className="text-green-900 font-semibold text-2xl">Shop All Products</h2>
         <p>Discover quality products for your everyday lifestyle </p>
     </div>
+    <div className="mt-2">
+        <img src="/shopHero.jpg" alt="" className="h-65 w-full rounded-md object-cover"/>
+    </div>
         </div>
 
 }
