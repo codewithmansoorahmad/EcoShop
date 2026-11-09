@@ -11,12 +11,12 @@ export default function UsedProducts({products}:typeProducts){
   products.map((item: productType) => {
     return (
       <div key={item.id} 
-      className="flex flex-col w-70  relative px-3 mx-20 "
+      className="flex flex-col w-70 border  rounded-md py-2   relative px-3 mx-20 "
        >
-        <button><Heart/></button>
-        <div className="bg-white ">
+        <div className="bg-[#F0F1EB]">
+        <button className="right-4 top-4  cursor-pointer size-8 bg-white flex items-center justify-center rounded-full  absolute "><Heart size={16}/></button>
 
-        <img src={item.thumbnail} alt={item.title} />
+        <img src={item.thumbnail} alt={item.title} className="rounded-md " />
         </div>
 <div>
 
