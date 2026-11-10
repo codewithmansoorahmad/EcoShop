@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type productType from "../typescript/ProductsType";
 
 
 const favoriteSlice=createSlice({
@@ -12,10 +13,11 @@ const favoriteSlice=createSlice({
 localStorage.setItem("favoritesProduct",favorites)
         },
         removeFavorites:(state,action)=>{
-            const filterProducts=state.favoriteProducts.filter((Item)=>Item.id!==action.payload.id)
+            const filterProducts=state.favoriteProducts.filter((Item:productType)=>Item.id!==action.payload.id)
             localStorage.setItem("favoritesProducts",filterProducts)
         }
     
     }
 })
 export default favoriteSlice.reducer
+export const {addFavorites,removeFavorites}=favoriteSlice.actions

@@ -1,12 +1,14 @@
 
 import { Heart } from "lucide-react";
 import type productType from "../typescript/ProductsType";
+import { useDispatch } from "react-redux";
 
 interface typeProducts {
   products: productType[];
 }
-
 export default function UsedProducts({ products }: typeProducts) {
+const dispatch=useDispatch();
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {products.map((item: productType) => {
@@ -16,7 +18,9 @@ export default function UsedProducts({ products }: typeProducts) {
             className="group flex flex-col relative overflow-hidden rounded-2xl border border-[#E5EAE3] bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <div className="relative flex h-40 sm:h-52 items-center justify-center overflow-hidden rounded-xl bg-[#F0F1EB] p-3">
-              <button className="absolute right-3 cursor-pointer top-3 z-10 flex size-9 items-center justify-center rounded-full bg-white text-[#245C3A] shadow-sm transition-colors hover:bg-[#245C3A] hover:text-white">
+              <button className="absolute right-3 cursor-pointer top-3 z-10 flex size-9 items-center justify-center rounded-full bg-white text-[#245C3A] shadow-sm transition-colors hover:bg-[#245C3A] hover:text-white"
+onClick={()=>dispatch(add)}
+              >
                 <Heart size={18} />
               </button>
 
@@ -41,7 +45,7 @@ export default function UsedProducts({ products }: typeProducts) {
               </h3>
 
               <p className="truncate text-xs text-gray-500">
-                {item.brand?`Brand: ${item.brand}`:null}
+                {item.brand?`Brand: ${item.brand}`:"Brand: N/A"}
               </p>
 
               <div className="flex items-center justify-between gap-1">
