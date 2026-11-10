@@ -3,12 +3,14 @@ import { Heart } from "lucide-react";
 import type productType from "../typescript/ProductsType";
 import { useDispatch } from "react-redux";
 import { addFavorites } from "../redux/FavoriteSlice";
+import { useState } from "react";
 
 interface typeProducts {
   products: productType[];
 }
 export default function UsedProducts({ products }: typeProducts) {
 const dispatch=useDispatch();
+const [isFill,setIsFill]=useState<boolean>(false)
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -20,9 +22,11 @@ const dispatch=useDispatch();
           >
             <div className="relative flex h-40 sm:h-52 items-center justify-center overflow-hidden rounded-xl bg-[#F0F1EB] p-3">
               <button className="absolute right-3 cursor-pointer top-3 z-10 flex size-9 items-center justify-center rounded-full bg-white text-[#245C3A] shadow-sm transition-colors hover:bg-[#245C3A] hover:text-white"
-onClick={()=>dispatch(addFavorites(item))}
+onClick={()=>{dispatch(addFavorites(item))
+  setIsFill(!isFill)
+}}
               >
-                <Heart size={18} />
+                <Heart size={18} fill={isFill?"red":"white"} />
               </button>
 
               <img
