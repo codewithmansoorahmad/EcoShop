@@ -2,6 +2,7 @@
 import { Heart } from "lucide-react";
 import type productType from "../typescript/ProductsType";
 import { useDispatch } from "react-redux";
+import { addFavorites } from "../redux/FavoriteSlice";
 
 interface typeProducts {
   products: productType[];
@@ -19,7 +20,7 @@ const dispatch=useDispatch();
           >
             <div className="relative flex h-40 sm:h-52 items-center justify-center overflow-hidden rounded-xl bg-[#F0F1EB] p-3">
               <button className="absolute right-3 cursor-pointer top-3 z-10 flex size-9 items-center justify-center rounded-full bg-white text-[#245C3A] shadow-sm transition-colors hover:bg-[#245C3A] hover:text-white"
-onClick={()=>dispatch(add)}
+onClick={()=>dispatch(addFavorites(item))}
               >
                 <Heart size={18} />
               </button>

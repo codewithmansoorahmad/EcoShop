@@ -1,20 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type productType from "../typescript/ProductsType";
+const initialState:{favoriteProducts:productType[]}={
+     favoriteProducts:JSON.parse(localStorage.getItem("favoritesProduct")||"[]")
 
+}
 
 const favoriteSlice=createSlice({
     name:"favorite",
-    initialState:{
-        favoriteProducts:JSON.parse(localStorage.getItem("favoritesProduct")||"[]")
-    },
+    initialState,
     reducers:{
         addFavorites:(state,action)=>{
-            const favorites=state.favoriteProducts.push(action.payload)
-localStorage.setItem("favoritesProduct",favorites)
+            state.favoriteProducts.push(action.payload)
+localStorage.setItem("favoritesProduct",JSON.stringify(state.favoriteProducts))
         },
         removeFavorites:(state,action)=>{
             const filterProducts=state.favoriteProducts.filter((Item:productType)=>Item.id!==action.payload.id)
-            localStorage.setItem("favoritesProducts",filterProducts)
+            
+
+            localStorage.setItem("favoritesProduct",filterProducts)
         }
     
     }
