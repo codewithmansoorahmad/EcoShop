@@ -29,7 +29,6 @@ const [error,setError]=useState()
   useEffect(() => {
     calledCategoryApi();
   }, [category]);
-console.log(products)
 return<>
 {!isLoading ?<Loading/>:
 <UsedProducts products={products}/>

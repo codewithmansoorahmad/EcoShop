@@ -4,6 +4,7 @@ import type productType from "../typescript/ProductsType";
 import { useDispatch } from "react-redux";
 import { addFavorites } from "../redux/FavoriteSlice";
 import { useState } from "react";
+import { useAppSelector } from "../redux/Hook";
 
 interface typeProducts {
   products: productType[];
@@ -11,7 +12,8 @@ interface typeProducts {
 export default function UsedProducts({ products }: typeProducts) {
 const dispatch=useDispatch();
 const [isFill,setIsFill]=useState<boolean>(false)
-
+const favorite=useAppSelector((state)=>state.favorites.favoriteProducts)
+console.log(favorite)
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {products.map((item: productType) => {
@@ -26,7 +28,7 @@ onClick={()=>{dispatch(addFavorites(item))
   setIsFill(!isFill)
 }}
               >
-                <Heart size={18} fill={isFill?"red":"white"} />
+                <Heart size={18} fill={favorite.find(pro=>pro.id===item.id)?"red":"white"} />
               </button>
 
               <img
