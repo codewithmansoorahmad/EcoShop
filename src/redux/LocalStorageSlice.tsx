@@ -10,10 +10,11 @@ const productSlice=createSlice({
     name:"Products",
     initialState,
     reducers:{
-        AllProducts:(state)=>{
-            
-
+        AllProducts:(state,action)=>{
+            state.allProducts=action.payload
+            localStorage.setItem("productsAll",JSON.stringify(state.allProducts))
         }
     }
 })
 export default productSlice.reducer
+export const {AllProducts}=productSlice.actions
