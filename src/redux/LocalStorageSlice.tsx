@@ -1,8 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type productType from "../typescript/ProductsType";
 
-const initialState:{allProducts:productType[]}={
-    allProducts:JSON.parse((localStorage.getItem("productsAll")||"[]"))
+const initialState:{allProducts:{products:productType[],categoryProducts:productType[]}}={
+    allProducts:{products:JSON.parse((localStorage.getItem("productsAll")||"[]")),
+        categoryProducts:JSON.parse((localStorage.getItem("productsAll")||"[]"))
+
+    }
 }
 
 
@@ -11,7 +14,7 @@ const productSlice=createSlice({
     initialState,
     reducers:{
         AllProducts:(state,action)=>{
-            state.allProducts=action.payload
+            state.allProducts.products=action.payload
             localStorage.setItem("productsAll",JSON.stringify(state.allProducts))
         }
     }
