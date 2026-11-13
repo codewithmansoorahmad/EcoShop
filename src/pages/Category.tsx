@@ -5,6 +5,7 @@ import UsedProducts from "../components/UsedProductsMap";
 import Loading from "../components/Loading";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../redux/Hook";
+import { AllProducts } from "../redux/LocalStorageSlice";
 
 
 export default function CategoryPage() {
@@ -22,7 +23,7 @@ const [error,setError]=useState()
     const data = await getProductsByCategory(category);
     setIsLoading(true)
     setProducts(data.products);
-    dispatch(data.products)
+    dispatch(AllProducts(data.products))
 
     } catch (err) {
       console.log(err)
@@ -34,7 +35,8 @@ const [error,setError]=useState()
     calledCategoryApi();
 
   }, [category]);
-  const products=useAppSelector((state)=>state.)
+  const productss=useAppSelector((state)=>state.products.allProducts)
+  console.log(productss)
 return<>
 {!isLoading ?<Loading/>:
 <UsedProducts products={products}/>
